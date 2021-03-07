@@ -13,8 +13,6 @@ usage: bash ./kali.sh [-o <ovpn_file>] [-g <github_username>]
 EOF
 }
 
-docker build . -t $DOCKER_TAG
-
 while [ -n "$1" ]; do
     case $1 in
         -o | --openvpn )
@@ -35,6 +33,8 @@ while [ -n "$1" ]; do
     esac
     shift
 done
+
+docker build . -t $DOCKER_TAG
 
 # Add a persistent docker volume, kali-staging
 DOCKER_OPTS=" -v kali-staging:/root/staging:rw $DOCKER_OPTS"
