@@ -8,7 +8,7 @@ usage()
   cat << EOF
 usage: bash ./kali.sh [-o <ovpn_file>] [-g <github_username>]
 -o    | --openvpn         (optional)      OpenVPN connection profile
--g    | --github_user     (optional)      Source branch
+-g    | --github_user     (optional)      Github username to fetch public keys for, for SSH access
 -h    | --help                            Brings up this menu
 EOF
 }
