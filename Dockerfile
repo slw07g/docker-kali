@@ -21,12 +21,14 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     kali-tools-top10 \
     ncat \
     netcat \
+    openssh-server \
     openvpn \ 
     python3-pip \
     smbclient \
     tcpdump \
     tmux \
     unrar \
+    upx \
     vim &&\
   pip3 install pycryptodome && \
   mkdir /dev/net && \ 
