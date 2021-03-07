@@ -2,7 +2,6 @@
 DOCKER_NAME="kali_hack"
 DOCKER_TAG="kali:hack"
 DOCKER_OPTS=""
-docker build . -t $DOCKER_TAG
 
 usage()
 {
@@ -14,8 +13,9 @@ usage: bash ./kali.sh [-o <ovpn_file>] [-g <github_username>]
 EOF
 }
 
+docker build . -t $DOCKER_TAG
+
 while [ -n "$1" ]; do
-    echo "Parsing arg ${1}"
     case $1 in
         -o | --openvpn )
             shift
