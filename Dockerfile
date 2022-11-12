@@ -23,12 +23,6 @@ RUN apt-get update && apt-get upgrade -yq && \
     chromium \
     kali-linux-default 
 
-# Metasploit
-#RUN curl -s https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
-#  chmod 755 msfinstall && \
-#  ./msfinstall && \
-#  rm msfinstall
-
 RUN apt install -y \ 
     openvpn \
     wget \
